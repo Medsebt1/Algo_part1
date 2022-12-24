@@ -1,0 +1,35 @@
+ALGORITHM checkpoint
+VAR
+    sentence:STRING;
+    A: ARRAY_OF CHAR ["a","e","o","u","i","y","A","E","O","U","I","Y"];
+    L,W,V:INTEGER,
+    
+BEGIN
+    L:=0;
+    W:=0;
+    V:=0;
+    i:=0;
+    J:=0;
+    Read(sentence)
+    Read(A)
+    FOR i FROM 0 TO sentence.length-1 STEP 1 DO
+    L=L+1
+    IF (sentence[i]=" " OR sentence[i]=".") THEN
+        W=W+1
+    END_IF
+    FOR j FROM 0 TO A.length-1 STEP 1  DO
+        IF (A[j]=sentence[i])
+    THEN V=V+1
+    END_IF
+    END_FOR
+    END_FOR
+    Write (L)
+    Write (W)
+    Write (V)
+
+END
+
+
+
+
+
